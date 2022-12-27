@@ -3,25 +3,25 @@
 #include <vector>
 int main() {
 	
-	std::ifstream MyBFile("b.txt");
+	std::ifstream BFile("b.txt");
 	std::vector<int>bVector;
 	
-	if (MyBFile) {        
+	if (BFile) {        
     int value;
 
-    while ( MyBFile >> value ) {
+    while ( BFile >> value ) {
         bVector.push_back(value);
      }
 	}	 
 
-	std::ifstream MyAFile("A.txt");
+	std::ifstream AFile("A.txt");
 	std::vector<std::vector<int> >Amatrix;
 	std::vector<int>Avector ;
 	
-	if (MyAFile) {        
+	if (AFile) {        
     int val;
   
-    while ( MyAFile >> val ) {
+    while ( AFile >> val ) {
 		Avector.push_back(val) ;
 		if (Avector.size()==bVector.size()) {
 			Amatrix.push_back(Avector) ;
